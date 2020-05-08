@@ -1,0 +1,152 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    margin: 0 auto;
+}
+.area{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 100vh;
+    width: 100%;
+    background-color: cornflowerblue;
+}
+.clock{
+    padding: 4px;
+    position: relative;
+    border: 6px solid #fff;
+    grid-column: 2/3;
+    grid-row:2/3 ;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    background-color: rgb(117, 114, 114);
+}
+.center{
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: calc(50% - 5px);
+    left: calc(50% - 5px);
+}
+.clock-12{
+    top: 0;
+    left: calc(50% - 5px);
+    position: absolute;
+}
+.clock-1{
+    position: absolute;
+    left: calc(74.6% - 2px);
+    top: calc(8.6% - 2px);
+}
+.clock-2{
+    position: absolute;
+    left: calc(90.2% - 2px);
+    top: calc(25.3% - 2px);
+}
+.clock-3{
+    position: absolute;
+    right: 0;
+    top: calc(50% - 5px);
+}
+.clock-4{
+    position: absolute;
+    left: calc(90.2% - 2px);
+    bottom: calc(25.3% - 2px);
+}
+.clock-5{
+    position: absolute;
+    left: calc(74.6% - 2px);
+   bottom: calc(8.6% - 2px);
+}
+.clock-6{
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 5px);
+}
+.clock-7{
+    position: absolute;
+    right:  calc(74.6% - 2px);
+    bottom: calc(8.6% - 2px);
+}
+.clock-8{
+    position: absolute;
+    right:  calc(90.2% - 2px);
+    bottom: calc(25.3% - 2px);
+}
+.clock-9{
+    position: absolute;
+    left: 0;
+    top: calc(50% - 5px);
+}
+.clock-10{
+    position: absolute;
+    right: calc(90.2% - 2px);
+    top: calc(25.3% - 2px);
+}
+.clock-11{
+    position: absolute;
+    right: calc(74.6% - 2px);   
+    top: calc(8.6% - 2px);
+}
+
+.stick_hour{
+    position: absolute;
+    height: 100px;
+    width: 4px; 
+    left: calc(50% - 2px);
+    top: calc(50% - 50px) ;
+    animation:  hour 86400s linear 0s infinite ;
+    display: inline-flex;
+}
+.stick_minute{
+    position: absolute;
+    height: 170px;
+    width: 3px; 
+    left: calc(50% - 1.5px);
+    top: calc(50% - 85px);
+    animation:  minute 3600s linear 0s infinite ;
+    display: inline-flex;
+}
+.stick_second{
+    position: absolute;;
+    height: 250px;
+    width: 2px;  
+    left: calc(50% - 1px);
+    top: calc(50% - 125px);
+    animation:  second 60s linear 0s infinite ;
+    display: inline-flex;
+}
+.stick_second_hidden{
+    height: 50%;
+    width: 100%;
+    background-color: black;
+}
+.stick_second_visibility{
+    height: 100%;
+    width: 50%;
+    display: none;
+}
+
+@keyframes second {  
+    100%{
+        transform: rotate(360deg); 
+    }
+}
+@keyframes hour {  
+    100%{
+        transform: rotate(360deg); 
+    }
+}
+@keyframes minute {  
+    100%{
+        transform: rotate(360deg); 
+    }
+}
